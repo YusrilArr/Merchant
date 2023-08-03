@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "962301561718",
+    "firebase_url": "https://gpaymerchantapp.firebaseio.com",
+    "project_id": "gpaymerchantapp",
+    "storage_bucket": "gpaymerchantapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962301561718:android:f68f04265ba8efe3e00857",
+        "android_client_info": {
+          "package_name": "com.gpay.merchantapp.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962301561718-9vrunusckcjveen0hjh4mrngst53k94j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gpay.merchantapp.demo",
+            "certificate_hash": "f877aca15fbeb653758b0ef5efa72405406cc6c7"
+          }
+        },
+        {
+          "client_id": "962301561718-f4sn0m3o9ol04agns9ehvt2g77vcdq89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArBN4jI78Dp7Xa2KnGRkwd71Co1DSYCdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962301561718-f4sn0m3o9ol04agns9ehvt2g77vcdq89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962301561718:android:8502af94b35e1528e00857",
+        "android_client_info": {
+          "package_name": "com.gpay.merchantapp.full"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962301561718-984n03ngmh1bfla1s5qub1nmb998i6k1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gpay.merchantapp.full",
+            "certificate_hash": "ce800b8f8cd7c9c03f6e5f484a443bdd06c3aace"
+          }
+        },
+        {
+          "client_id": "962301561718-f4sn0m3o9ol04agns9ehvt2g77vcdq89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArBN4jI78Dp7Xa2KnGRkwd71Co1DSYCdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962301561718-f4sn0m3o9ol04agns9ehvt2g77vcdq89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

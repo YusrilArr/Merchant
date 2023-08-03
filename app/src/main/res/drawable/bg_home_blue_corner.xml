@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue" />
+            <corners
+                android:bottomLeftRadius="30dp"
+                android:bottomRightRadius="30dp"></corners>
+        </shape>
+    </item>
+    <item
+        android:width="212dp"
+        android:height="255dp"
+        android:bottom="0dp"
+        android:gravity="right"
+        android:drawable="@drawable/pattern" />
+</layer-list>

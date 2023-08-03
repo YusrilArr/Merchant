@@ -1,0 +1,176 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.gpay.merchantapp"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 18
+        versionName "1.2.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('C:/Intern/WORK/merchant/gaja-merchant-app/app/keystore')
+            //storeFile file('D:\\GPAY\\Mobile_Apps\\AndroidProject\\app\\keystore')
+            //storeFile file('/home/aulia/StudioProjects/GPayCard/app/keystore')
+            storePassword 'merchantGPay'
+            keyAlias = 'merchdebug'
+            keyPassword 'merchantGPay'
+        }
+
+        release {
+            storeFile file('C:/Intern/WORK/merchant/gaja-merchant-app/app/keystoreProd')
+            //storeFile file('D:\\GPAY\\Mobile_Apps\\AndroidProject\\app\\keystoreProd')
+            //storeFile file('/home/aulia/StudioProjects/GPayCard/app/keystoreProd')
+            storePassword 'merchantGPay'
+            keyAlias = 'merchrelease'
+            keyPassword 'merchantGPay'
+        }
+    }
+
+    buildTypes {
+        release {
+            //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/dev_ewallet_api/\"" //Merchant App Server
+            //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/c_api/api/public/\"" //Production
+            //buildConfigField "String", "BASEURL", "\"https://dev-c.gpay.digital/api/public/\"" //Production Indocloud
+            buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/project_c_api/api/public/\"" //Production Colo
+            buildConfigField "String", "BASEURL_BACKUP", "\"https://psmw2.gpay.digital/project_c_api/api/public/\"" //Backup Colo
+            //buildConfigField "String", "BASEURL_BACKUP", "\"https://psmw2.gpay.digital/api/public/\""
+            buildConfigField "String", "APPNAME", "\"Gaja Merchant\""
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/dev_ewallet_api/\"" //Merchant App Server
+            //buildConfigField "String", "BASEURL", "\"https://dev-c.gpay.digital/api/public/\"" //Production Indocloud
+            //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/project_c_api/api/public/\"" //Production Colo
+            buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/dev_c_api/api/public/\"" // Development
+            //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/c_api/api/public/\"" //Production
+            //buildConfigField "String", "BASEURL", "\"https://api-test.gpay.digital/dev_c_api/api/public/\"" // Testing Renewal SSL
+            buildConfigField "String", "BASEURL_BACKUP", "\"https://psmw2.gpay.digital/api/public/\""
+            buildConfigField "String", "APPNAME", "\"Gaja Merchant Dev\""
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    // Specifies one flavor dimension.
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            // Assigns this product flavor to the "version" flavor dimension.
+            // This property is optional if you are using only one dimension.
+            dimension "version"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+        full {
+            dimension "version"
+            applicationIdSuffix ".full"
+        }
+    }
+    compileOptions {
+        sourceCompatibility = "1.8"
+        targetCompatibility = "1.8"
+    }
+    namespace 'com.gpay.merchantapp'
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
+    //implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    implementation 'com.mutualmobile:androidkeystore:0.0.4'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'androidx.security:security-crypto:1.1.0-alpha05'
+
+    /* def viewPagerVersion = "1.0.0"
+     implementation "androidx.viewpager2:viewpager2:$viewPagerVersion"
+     def glide_version = "4.9.0"
+     implementation "com.github.bumptech.glide:glide:$glide_version"
+     implementation "com.github.bumptech.glide:okhttp3-integration:$glide_version"
+     kapt "com.github.bumptech.glide:compiler:$glide_version"*/
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.chaos.view:pinview:1.4.2'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.5.0'
+    implementation project(':qrcode-release')
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+
+    def daggerVer = 2.45
+    implementation "com.google.dagger:dagger:$daggerVer"
+    kapt "com.google.dagger:dagger-compiler:$daggerVer"
+    implementation "com.google.dagger:dagger-android:$daggerVer"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVer"
+    implementation "com.google.dagger:dagger-android-support:$daggerVer"
+    kapt "com.google.dagger:dagger-android-support:2.45"
+
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'javax.inject:javax.inject:1'
+
+    implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+    implementation files('libs\\commons-codec-1.12.jar')
+
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+
+    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+    implementation 'io.fotoapparat:fotoapparat:2.5.0'
+    
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.5'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.6.0")
+
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    //implementation 'com.google.firebase:firebase-analytics'
+}
+
+

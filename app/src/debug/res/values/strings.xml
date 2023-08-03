@@ -1,0 +1,517 @@
+<resources>
+    <string name="app_name">Gaja Merchant Dev</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_download_guide">Download Guide Book</string>
+    <string name="menu_receive_payment">Receive Payment</string>
+    <string name="menu_merchant">Merchant</string>
+    <string name="menu_trans_history">Transaction History</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_profile">My Profile</string>
+    <string name="menu_term_condition">Terms &amp; Conditions</string>
+    <string name="menu_log_out">Logout</string>
+    <string name="menu_versi_apps">1.0.3</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="str_login">Login</string>
+    <string name="txt_forgot">Forgot PIN?</string>
+    <string name="str_login_to_register">New to GPay? Register now</string>
+    <string name="str_registration">Registration</string>
+    <string name="str_forgot_pin">Forgot PIN</string>
+    <string name="str_forget_pin">Forget PIN</string>
+    <string name="str_forget_pin_notice">Contact us to reset PIN :</string>
+    <string name="str_please_input">Please input the following information</string>
+    <string name="str_enter_otp">OTP Verification</string>
+    <string name="str_term_condition">
+        <u>I agree with the Terms &amp; Conditions</u>
+    </string>
+
+    <string name="frequency_limit">Transaction Frequency Exceeding Limit</string>
+    <string name="str_popup_no_internet_conn">No Internet Connection !</string>
+    <string name="str_sms_regis">SMS Registration code</string>
+    <string name="str_sent_sms_OTP">We\'ve sent SMS OTP to [NomorTelp].\nPlease enter the code to proceed</string>
+    <string name="str_sent_sms_OTP1">We\'ve sent SMS OTP to</string>
+    <string name="str_sent_sms_OTP2">Please enter the code to proceed</string>
+    <string name="str_resend_sms">
+        <u>Resend SMS OTP</u>
+    </string>
+    <string name="str_resend_otp">Resend OTP in</string>
+    <string name="str_create_pin">Create PIN</string>
+    <string name="str_confirm_pin">Confirm 6-digit PIN</string>
+    <string name="txt_create_pin">Your PIN will be used for Login and \nTransactions in GPay</string>
+    <string name="txt_mobile_number">Mobile Number</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_enter_pin">Input PIN</string>
+    <string name="str_first_name">First Name</string>
+    <string name="str_last_name">Last Name</string>
+    <string name="str_email_address">Email Address</string>
+    <string name="str_confirm_email_address">Confirm Email Address</string>
+    <string name="str_date_of_birth">Date of Birth</string>
+    <string name="str_smscode">SMS code</string>
+    <string name="str_name_home">Hello</string>
+    <string name="txt_money">Rp 0</string>
+    <string name="str_balance">Balance</string>
+    <string name="txt_phoneNumber"></string>
+    <string name="txt_62">62</string>
+    <string name="str_account_number">Account Number</string>
+    <string name="str_cardActive">Active</string>
+    <string name="str_member_status">Account Status</string>
+    <string name="str_showQR_code">Show QR code</string>
+    <string name="str_showQR_receive_payment">Receive Payment</string>
+    <string name="str_generate_QR_receive_payment">Generate QR Code</string>
+    <string name="str_generate_QR">Generate QR</string>
+    <string name="str_scan">Scan</string>
+    <string name="str_transaction">Transactions</string>
+    <string name="str_trans_amount">Amount</string>
+    <string name="str_loading_data">Loading Data</string>
+
+    <string name="str_home_receivepayment">Receive Payment</string>
+    <string name="str_from_data">From</string>
+    <string name="str_to_data">To</string>
+
+    <string name="str_home_transhistory">Transaction History</string>
+
+    <string name="str_store_name">Store Name</string>
+    <string name="str_store_location">Store location address line 1</string>
+    <string name="str_store_email">Store email@email.com</string>
+    <string name="str_store_phone_number">Phone number</string>
+
+    <string name="str_history">History</string>
+    <string name="str_transaction_history">
+        <u>Transactions History</u>
+    </string>
+
+
+    <string name="str_transaction_history_header">Transaction History</string>
+    <string name="str_settlement_history_header">Settlement History</string>
+    <string name="str_today_transaction">Today Transaction</string>
+    <string name="str_no_transaction_today">No transaction for today</string>
+    <string name="str_no_transaction_tanggal">No transaction for chosen date</string>
+    <string name="str_settlement_day">Maximum last 14 days</string>
+    <string name="str_settlement_day_validation">Maximum last 14 days</string>
+    <string name="str_home_transaction">Transaction</string>
+    <string name="str_home_history">History</string>
+    <string name="str_home_history_settlement">History</string>
+    <string name="str_receive_payment">Receive Payment</string>
+    <string name="str_home_settlement">Settlement</string>
+    <string name="str_home_receive">Receive</string>
+    <string name="str_home_voucher">Voucher</string>
+    <string name="str_home_voucher_validation">Validation</string>
+    <string name="str_home_payment">Payment</string>
+    <string name="str_transaction_validasi_tglawalkosong">First date cannot be empty</string>
+    <string name="str_transaction_validasi_tglawalbesar">The start date cannot be greater than the end date</string>
+    <string name="str_transaction_from">From</string>
+    <string name="str_transaction_to">To</string>
+    <string name="str_valid_five">valid for 5 minutes</string>
+    <string name="str_valid_in">Valid in</string>
+    <string name="str_code_expires">QR Code expires in</string>
+    <string name="str_receive_amount">Amount</string>
+    <string name="str_receive_amount_detail">Amount:</string>
+    <string name="str_close">Close</string>
+    <string name="str_enter_your_pin">Please enter your PIN to continue</string>
+    <string name="str_input_old_pin">Input Current PIN</string>
+
+    <string name="str_input_login_pin">Input PIN</string>
+    <string name="str_input_login_pin_title">Login PIN</string>
+    <string name="str_input_old_pass">Input Current Password</string>
+    <string name="str_input_pass">Input Password</string>
+    <string name="txt_card_number">380000000433</string>
+    <string name="str_card_number">Card number</string>
+    <string name="txt_digit_pin">6-digit PIN</string>
+    <string name="str_my_profile">My Profile</string>
+    <string name="str_basic_service">Basic Service</string>
+    <string name="txt_syamsi"></string>
+    <string name="txt_test">test</string>
+    <string name="txt_email"></string>
+    <string name="txt_date">29 May 1985</string>
+    <string name="str_use_touch_id">Use Fingerprint or Face Recognition</string>
+    <string name="str_change_pin">Change PIN</string>
+    <string name="str_change_pass">Change Password</string>
+    <string name="txt_old_pin">Input Old PIN</string>
+    <string name="txt_set_new_pin">Set New PIN</string>
+    <string name="txt_confirm_new_pin">Confirm New PIN</string>
+    <string name="str_upgrade_regis">Upgrade to Full Service</string>
+    <string name="txt_gender_selected">Gender (please select)</string>
+    <string name="str_your_photo">Your Photo\n(Selfie with Identity Card)</string>
+    <string name="str_re_confirm_new_pin">Re-confirm New PIN</string>
+    <string name="str_identity_card">Identity Card</string>
+    <string name="txt_identity_card_number">ID Number (KTP/SIM)</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_female">Female</string>
+    <string name="txt_place_of_birth">Place of Birth</string>
+    <string name="txt_mother_maiden_name">Mother\'s Maiden Name</string>
+    <string name="txt_occupation_select">Occupation (please select)</string>
+    <string name="str_nationality">Nationality</string>
+    <string name="str_occupation">Occupation</string>
+    <string name="str_address_as_per_id">Address as per ID Card</string>
+    <string name="str_postal_code">Postal Code</string>
+    <string name="str_current_address_is">Current address is the\nsame as per ID Card</string>
+    <string name="txt_zip_code">ZIP Code</string>
+    <string name="txt_country_select">Country (please select)</string>
+    <string name="txt_province_select">Province (please select)</string>
+    <string name="txt_city_select">City (please select)</string>
+    <string name="txt_address">Address</string>
+    <string name="txt_zip_code_as_id_card">ZIP Code (as per ID card)</string>
+    <string name="txt_address_as_id_card">Address (as per ID card)</string>
+    <string name="str_country">Country (as per ID card)</string>
+    <string name="txt_please_select">please select</string>
+    <string name="str_province">Province</string>
+    <string name="str_city">City</string>
+    <string name="str_upgrade_user">Upgrade User</string>
+    <string name="str_update_profile">Update Profile</string>
+    <string name="str_our_customer">Our Customer Service team is ready to \nassist if you have any questions or
+        \nproblems in using the app.
+    </string>
+    <string name="str_please_send_your">Please send your feedback or complaints \nto:</string>
+    <string name="str_by_email">By Email</string>
+    <string name="str_hellogpay">hello@gpay.id</string>
+    <string name="str_helpdeskgpay">helpdesk.ops@gpay.id</string>
+    <string name="str_contact_us">CONTACT US</string>
+    <string name="str_contact_us_lowercase">Contact Us</string>
+    <string name="str_forget_pin_lowercase">Forget PIN ?</string>
+    <string name="str_term">Terms &amp; Conditions</string>
+    <string name="str_selamat_datang">Welcome,</string>
+    <string name="str_syarat_dan_ketentuan">Syarat dan ketentuan GPay</string>
+    <string name="str_silakan_membaca">Silakan membaca Syarat dan Ketentuan berikut\ndengan seksama dalam menggunakan
+        layanan\naplikasi kami.
+    </string>
+    <string name="str_intruksi_anda">Intruksi Anda Prioritas Kami</string>
+    <string name="str_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac placerat. Eget est lorem ipsum dolor.
+        Consequat nisl vel pretium lectus. Dignissim enim sit amet venenatis urna cursus eget. Dui accumsan sit amet
+        nulla facilisi morbi tempus iaculis urna. Dignissim cras tincidunt lobortis feugiat vivamus. Tortor posuere ac
+        ut consequat semper.
+    </string>
+    <string name="str_help">HELP</string>
+    <string name="str_about_gpay">About GPay</string>
+    <string name="str_what_is_gpay">What is GPay Application?</string>
+    <string name="str_gpay_is_qr">GPay is a QR code based electronic\npayment solution that offers convenient\nin
+        transaction by only using\nsmartphone.
+    </string>
+    <string name="str_what_are_benefit">What are the benerfits of using\nGPay?</string>
+    <string name="str_satu_ease">1. Ease of payment without the need\nto carrying cash. Simply bring your\nsmartphone.
+    </string>
+    <string name="str_dua_all">2. All transactions are recorded so you\ncan easily track your spending.</string>
+    <string name="str_tiga_secure">3. Secure transactions using PIN\nwhich only known by you.</string>
+    <string name="str_by_phone">By Phone</string>
+    <string name="txt_by_phone_number">(021) 2918 6667</string>
+    <string name="txt_by_ops_phone_number">+62 21 2525971</string>
+    <string name="str_working_hours">Working Hours</string>
+    <string name="txt_mon_fri">Mon-Fri (8am - 5pm)</string>
+    <string name="str_anda_memahami">Anda memahami dan menyetujui metode pengiriman\ninformasi secara elektronik yang
+        digunakan untuk\nmengirimkan data <b>Pengguna</b> dan segala resikonya.\nAnda menyatakan menyetujui untuk
+        membebaskan <b>GPay</b>\ndari segala kerugian yang timbul
+    </string>
+    <string name="str_ix_keadaan">IX Keadaan KAHAR (FORCE MAJUERE)</string>
+    <string name="str_sesuai_dengan">Sesuai dengan persyaratan dari GPay Indonesia (Regulator\nUang Elektronik di
+        Indonesia), Anda diminta untuk\nmemberikan data pribadi saat melakukan pendaftaran\npertama kali di aplikasi <b>
+            GPay</b>.
+    </string>
+    <string name="str_pastikan_informasi">Pastikan informasi yang Anda berikan adalah informasi\nyang benar dan akurat,
+        dan mohon menginformasikan\nkembali kepada <b>GPay</b> jika terdapat perubahan. Anda\ndapat menghubungi kami di <u>
+            hello@gtech.digital</u>.
+    </string>
+    <string name="str_kami_memastikan">Kami memastikan kerahasiaan dan keamanan informasi\ndiri yang Anda berikan
+        terjaga dengan baik.
+    </string>
+    <string name="str_x_pernyataan">X. Pernyataan dan Pengaduan</string>
+    <string name="str_by_continuing">By continuing, you have agreed with the terms &amp; \nconditions of GPay</string>
+    <string name="str_continue">Continue</string>
+    <string name="str_your_pin">Your PIN will be used for Login and\nTransaction in GPay</string>
+    <string name="str_re_confirm_pin">Re-confirm PIN to complete registration</string>
+    <string name="str_confirm_payment">Payment Details</string>
+    <string name="str_scan_qr_code">Scan QR Code</string>
+    <string name="str_please_enter">This field is required</string>
+    <string name="str_invalid_format">Invalid Email Format</string>
+    <string name="str_email_no_match">Email address is not match</string>
+    <string name="str_place_qr">Place the QR code within box above</string>
+    <string name="str_place_qr_voucher">Scan QR for validating voucher</string>
+    <string name="str_payment_to">Payment to</string>
+    <string name="str_foodhall">Foodhall Istana Sahid</string>
+    <string name="str_payable">Payable Amount</string>
+    <string name="str_rp">Rp</string>
+    <string name="txt_tigaratus">300,000</string>
+    <string name="txt_insert_amount">Input Amount</string>
+    <string name="str_transaction_complete">Transaction Complete</string>
+    <string name="str_transaction_detail">Transaction Detail</string>
+    <string name="str_show_this">Show this Transaction ID to cashier to\ncomplete the purchase</string>
+
+    <string name="str_show_transhistory">Your Transaction ID</string>
+    <string name="str_transdetail_date">Date:</string>
+    <string name="str_transdetail_desc">Transaction Type:</string>
+    <string name="str_transdetail_cust">Customer:</string>
+    <string name="str_transdetail_refid">Ref ID:</string>
+    <string name="str_transdetail_issuer">Issuer:</string>
+    <string name="str_transdetail_rrn">RRN:</string>
+    <string name="str_transdetail_search">Search</string>
+
+    <string name="txt_number_transaction">4567</string>
+    <string name="str_details">Details</string>
+    <string name="str_receiver">Receiver</string>
+    <string name="str_amount">Amount</string>
+    <string name="str_date_and_time">Date &amp; Time</string>
+    <string name="str_date_transaction">12 May 2019</string>
+    <string name="str_titik_dua">:</string>
+    <string name="str_show_this_qr">Show this QR to store cashier or GPay\nagent to complete transaction</string>
+    <string name="str_upload_document">Upload Document</string>
+    <string name="str_national_id_card">1. National ID Card (KTP/SIM)</string>
+    <string name="str_selfie_with_id_card">2. Selfie with ID Card (KTP/SIM)</string>
+    <string name="str_personal_information">Personal Information</string>
+    <string name="str_hi_widhi">Hi Widhi</string>
+    <string name="str_upgrade">upgrade</string>
+    <string name="str_no_transaction">No transaction</string>
+    <string name="str_upgrade_to_full">Upgrade to Full Service</string>
+    <string name="str_upgrade_in_review">Upgrade in review</string>
+    <string name="str_popup_failed_login">Username or \nPIN that you entered\nis incorrect</string>
+    <string name="str_popup_cancel_register">Are you sure you want to quit?\nYour data will not be saved</string>
+    <string name="str_popup_download_pdf">Are you sure you want to download the guide book?</string>
+    <string name="str_popup_failed_qris">Failed to download QRIS display image. Contact GAJA customer service</string>
+    <string name="str_popup_force_permission">You must approve this storage permission in the app settings on your device.</string>
+    <string name="str_stay">Stay</string>
+    <string name="str_quit">Go Back</string>
+    <string name="str_we_checking">We’re checking your information. Please wait within 3 business days since the request
+        submitted
+    </string>
+    <string name="str_upgrade_to_full_service">Upgrade to Full Service and enjoy up to Rp \n10,000,000 balance limit per
+        month
+    </string>
+
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one
+        fingerprint registered in device settings)
+    </string>
+    <string name="title_activity_home">Fingerprint</string>
+    <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
+    <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+    <string name="PIN_is_not_match">PIN is not match. Please try again</string>
+    <string name="str_accept_and_continue">Accept &amp; Continue</string>
+    <string name="str_next">Next</string>
+    <string name="str_save">Save</string>
+    <string name="str_sign_in">Sign In</string>
+    <string name="str_continue_login">Continue</string>
+    <string name="str_merchant_registration">Merchant Registration</string>
+    <string name="str_last_login">Last Login:</string>
+    <string name="str_pay">Pay</string>
+    <string name="str_unrecognized">Unrecognized QR code.\nPlease scan again or try again later</string>
+    <string name="str_payment">Payment</string>
+    <string name="str_select_occup">- Select Occupation -</string>
+    <string name="str_select_province">- Select Province -</string>
+    <string name="str_submit">Submit</string>
+    <string name="str_quit_dashboard">Quit</string>
+
+    <!--property name-->
+    <string name="platform">Platform</string>
+    <string name="device_type">device_type</string>
+    <string name="device_family">device_family</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="region">Region</string>
+    <string name="start_version">start_version</string>
+    <string name="version">Version</string>
+    <string name="carrier">Carrier</string>
+    <string name="os">OS</string>
+    <string name="language">Language</string>
+    <string name="device_id">device_id</string>
+    <string name="mobile_number">mobile_number</string>
+    <string name="gpay_user">gpay_user</string>
+    <string name="date" translatable="false">date</string>
+    <string name="pin_is_weak" translatable="false">pin_is_weak</string>
+    <string name="pin_is_match" translatable="false">pin_is_match</string>
+    <string name="biometrics_login" translatable="false">biometrics_login</string>
+    <string name="is_suspended" translatable="false">is_suspended</string>
+    <string name="error_message" translatable="false">error_message</string>
+    <string name="number_of_refresh" translatable="false">number_of_refresh</string>
+    <string name="transaction_id" translatable="false">transaction_id</string>
+    <string name="merchant_name" translatable="false">merchant_name</string>
+    <string name="amount" translatable="false">Amount</string>
+    <string name="date_time" translatable="false">date_time</string>
+    <string name="latlon" translatable="false">lat_lon</string>
+    <string name="time_spent" translatable="false">time_spent</string>
+    <string name="registration_time_spent" translatable="false">registration_time_spent</string>
+    <string name="processing_time" translatable="false">processing_time</string>
+    <string name="kyc_type" translatable="false">kyc_type</string>
+    <string name="otp_blocked" translatable="false">otp_blocked</string>
+    <string name="qr_expired" translatable="false">qr_expired</string>
+    <string name="upload_id_card" translatable="false">upload_id_card</string>
+    <string name="upload_selfie" translatable="false">upload_selfie</string>
+    <string name="first_name" translatable="false">first_name</string>
+    <string name="last_name" translatable="false">last_name</string>
+    <string name="gender" translatable="false">gender</string>
+    <string name="id_number" translatable="false">id_number</string>
+    <string name="nationality" translatable="false">nationality</string>
+    <string name="place_of_birth" translatable="false">place_of_birth</string>
+    <string name="address_as_per_id_card" translatable="false">address_as_per_id_card</string>
+    <string name="province_as_per_id_card" translatable="false">province_as_per_id_card</string>
+    <string name="city_as_per_id_card" translatable="false">city_as_per_id_card</string>
+    <string name="postal_code_as_per_id_card" translatable="false">postal_code_as_per_id_card</string>
+    <string name="same_as_current_address" translatable="false">same_as_current_address</string>
+    <string name="current_address" translatable="false">current_address</string>
+    <string name="current_province" translatable="false">current_province</string>
+    <string name="current_city" translatable="false">current_city</string>
+    <string name="current_postal" translatable="false">current_postal</string>
+
+    <!--event name-->
+    <string name="loginscreen_viewed">loginscreen_viewed</string>
+    <string name="loginscreen_opened">loginscreen_opened</string>
+    <string name="loginscreen_submit">loginscreen_submit</string>
+    <string name="login_submit">login_submit</string>
+    <string name="app_opened">app_opened</string>
+    <string name="close_app">close_app</string>
+    <string name="login_tapped">login_tapped</string>
+    <string name="termsconditions_viewed">termsconditions_viewed</string>
+    <string name="registrationform_back_tapped">registrationform_back_tapped</string>
+    <string name="termsconditions_back_tapped">termsconditions_back_tapped</string>
+    <string name="termsconditions_continue">termsconditions_continue</string>
+    <string name="registrationform_viewed">registrationform_viewed</string>
+    <string name="registrationform_back_popup_viewed">registrationform_back_popup_viewed</string>
+    <string name="registrationform_back_popup_close">registrationform_back_popup_close</string>
+    <string name="registrationform_back_popup_stay">registrationform_back_popup_stay</string>
+    <string name="registrationform_next_tapped" translatable="false">registrationform_next_tapped</string>
+    <string name="registration_otp_viewed" translatable="false">registration_otp_viewed</string>
+    <string name="registration_otp_resend_tapped" translatable="false">registration_otp_resend_tapped</string>
+    <string name="registration_otp_incorrect" translatable="false">registration_otp_incorrect</string>
+    <string name="registration_otp_back_tapped" translatable="false">registration_otp_back_tapped</string>
+    <string name="registration_otp_next" translatable="false">registration_otp_next</string>
+    <string name="create_pin_viewed" translatable="false">create_pin_viewed</string>
+    <string name="create_pin_weak" translatable="false">create_pin_weak</string>
+    <string name="create_pin_cancel_tapped" translatable="false">create_pin_cancel_tapped</string>
+    <string name="create_pin_next_tapped" translatable="false">create_pin_next_tapped</string>
+    <string name="confirm_pin_viewed" translatable="false">confirm_pin_viewed</string>
+    <string name="confirm_pin_notmatch" translatable="false">confirm_pin_notmatch</string>
+    <string name="confirm_pin_back_tapped" translatable="false">confirm_pin_back_tapped</string>
+    <string name="confirm_pin_next_tapped" translatable="false">confirm_pin_next_tapped</string>
+    <string name="registration_success" translatable="false">registration_success</string>
+    <string name="homescreen_viewed" translatable="false">homescreen_viewed</string>
+    <string name="forgotpin_tapped" translatable="false">forgotpin_tapped</string>
+    <string name="forgotpin_info_viewed" translatable="false">forgotpin_info_viewed</string>
+    <string name="forgotpin_info_back_tapped" translatable="false">forgotpin_info_back_tapped</string>
+    <string name="forgotpin_info_next_tapped" translatable="false">forgotpin_info_next_tapped</string>
+    <string name="forgotpin_otp_viewed" translatable="false">forgotpin_otp_viewed</string>
+    <string name="forgotpin_otp_resend_tapped" translatable="false">forgotpin_otp_resend_tapped</string>
+    <string name="forgotpin_otp_incorrect" translatable="false">forgotpin_otp_incorrect</string>
+    <string name="forgotpin_otp_cancel_tapped" translatable="false">forgotpin_otp_cancel_tapped</string>
+    <string name="create_newpin_viewed" translatable="false">create_newpin_viewed</string>
+    <string name="create_newpin_weak" translatable="false">create_newpin_weak</string>
+    <string name="create_newpin_cancel_tapped" translatable="false">create_newpin_cancel_tapped</string>
+    <string name="create_newpin_next_tapped" translatable="false">create_newpin_next_tapped</string>
+    <string name="confirm_newpin_viewed" translatable="false">confirm_newpin_viewed</string>
+    <string name="confirm_newpin_notmatch" translatable="false">confirm_newpin_notmatch</string>
+    <string name="confirm_newpin_cancel_tapped" translatable="false">confirm_newpin_cancel_tapped</string>
+    <string name="confirm_newpin_next_tapped" translatable="false">confirm_newpin_next_tapped</string>
+    <string name="login_error" translatable="false">login_error</string>
+    <string name="homescreen_refreshed" translatable="false">homescreen_refreshed</string>
+    <string name="scanqr_tapped" translatable="false">scanqr_tapped</string>
+    <string name="scanqr_opencam_viewed" translatable="false">scanqr_opencam_viewed</string>
+    <string name="scanqr_opencam_back" translatable="false">scanqr_opencam_back</string>
+    <string name="scanqr_opencam_error" translatable="false">scanqr_opencam_error</string>
+    <string name="scanqr_opencam_next" translatable="false">scanqr_opencam_next</string>
+    <string name="scanqr_paymentdetails_viewed" translatable="false">scanqr_paymentdetails_viewed</string>
+    <string name="scanqr_paymentdetails_back_tapped" translatable="false">scanqr_paymentdetails_back_tapped</string>
+    <string name="scanqr_paymentdetails_error" translatable="false">scanqr_paymentdetails_error</string>
+    <string name="scanqr_paymentdetails_next_tapped" translatable="false">scanqr_paymentdetails_next_tapped</string>
+    <string name="scanqr_biometrics" translatable="false">scanqr_biometrics</string>
+    <string name="scanqr_inputpin_viewed" translatable="false">scanqr_inputpin_viewed</string>
+    <string name="scanqr_inputpin_close" translatable="false">scanqr_inputpin_close</string>
+    <string name="scanqr_inputpin_popup_viewed" translatable="false">scanqr_inputpin_popup_viewed</string>
+    <string name="scanqr_inputpin_popup_back" translatable="false">scanqr_inputpin_popup_back</string>
+    <string name="scanqr_inputpin_popup_stay" translatable="false">scanqr_inputpin_popup_stay</string>
+    <string name="scanqr_inputpin_error_viewed" translatable="false">scanqr_inputpin_error_viewed</string>
+    <string name="scanqr_inputpin_next" translatable="false">scanqr_inputpin_next</string>
+    <string name="scanqr_success_viewed" translatable="false">scanqr_success_viewed</string>
+    <string name="scanqr_success_close" translatable="false">scanqr_success_close</string>
+    <string name="showqr_tapped" translatable="false">showqr_tapped</string>
+    <string name="showqr_inputpin_viewed" translatable="false">showqr_inputpin_viewed<showqr_inputpin_viewed></showqr_inputpin_viewed></string>
+    <string name="showqr_biometrics" translatable="false">showqr_biometrics</string>
+    <string name="showqr_inputpin_close" translatable="false">showqr_inputpin_close</string>
+    <string name="showqr_inputpin_popup_viewed" translatable="false">showqr_inputpin_popup_viewed</string>
+    <string name="showqr_inputpin_popup_back_tapped" translatable="false">showqr_inputpin_popup_back_tapped</string>
+    <string name="showqr_inputpin_popup_stay_tapped" translatable="false">showqr_inputpin_popup_stay_tapped</string>
+    <string name="showqr_inputpin_error_viewed" translatable="false">showqr_inputpin_error_viewed</string>
+    <string name="showqr_inputpin_next" translatable="false">showqr_inputpin_next</string>
+    <string name="showqr_viewed" translatable="false">showqr_viewed</string>
+    <string name="showqr_close_tapped" translatable="false">showqr_close_tapped</string>
+    <string name="showqr_expired_viewed" translatable="false">showqr_expired_viewed</string>
+    <string name="showqr_expired_popup_retry" translatable="false">showqr_expired_popup_retry</string>
+    <string name="showqr_expired_popup_close" translatable="false">showqr_expired_popup_close</string>
+    <string name="trxhistory_tapped" translatable="false">trxhistory_tapped</string>
+    <string name="trxhistory_viewed" translatable="false">trxhistory_viewed</string>
+    <string name="trxhistory_close_tapped" translatable="false">trxhistory_close_tapped</string>
+    <string name="myprofile_tapped" translatable="false">myprofile_tapped</string>
+    <string name="myprofile_viewed" translatable="false">myprofile_viewed</string>
+    <string name="myprofile_back_tapped" translatable="false">myprofile_back_tapped</string>
+    <string name="myprofile_upgrade_tapped" translatable="false">myprofile_upgrade_tapped</string>
+    <string name="myprofile_updateprofile_tapped" translatable="false">myprofile_updateprofile_tapped</string>
+    <string name="myprofile_changepin_tapped" translatable="false">myprofile_changepin_tapped</string>
+    <string name="upgrade_tapped" translatable="false">upgrade_tapped</string>
+    <string name="upgradeform_viewed" translatable="false">upgradeform_viewed</string>
+    <string name="upgradeform_back_tapped" translatable="false">upgradeform_back_tapped</string>
+    <string name="upgradeform_popup_viewed" translatable="false">upgradeform_popup_viewed</string>
+    <string name="upgradeform_popup_back_tapped" translatable="false">upgradeform_popup_back_tapped</string>
+    <string name="upgradeform_popup_stay_tapped" translatable="false">upgradeform_popup_stay_tapped</string>
+    <string name="upgradeform_error_viewed" translatable="false">upgradeform_error_viewed</string>
+    <string name="upgradeform_submit_tapped" translatable="false">upgradeform_submit_tapped</string>
+    <string name="upgradeform_success" translatable="false">upgradeform_success</string>
+    <string name="updateprofile_tapped" translatable="false">updateprofile_tapped</string>
+    <string name="updateprofileform_viewed" translatable="false">updateprofileform_viewed</string>
+    <string name="updateprofileform_back_tapped" translatable="false">updateprofileform_back_tapped</string>
+    <string name="updateprofileform_popup_viewed" translatable="false">updateprofileform_popup_viewed</string>
+    <string name="updateprofileform_popup_back" translatable="false">updateprofileform_popup_back</string>
+    <string name="updateprofileform_popup_stay" translatable="false">updateprofileform_popup_stay</string>
+    <string name="updateprofileform_error_viewed" translatable="false">updateprofileform_error_viewed</string>
+    <string name="updateprofileform_save_tapped" translatable="false">updateprofileform_save_tapped</string>
+    <string name="updateprofile_inputpin_viewed" translatable="false">updateprofile_inputpin_viewed</string>
+    <string name="updateprofile_inputpin_back_tapped" translatable="false">updateprofile_inputpin_back_tapped</string>
+    <string name="updateprofile_inputpin_error_viewed" translatable="false">updateprofile_inputpin_error_viewed</string>
+    <string name="updateprofile_inputpin_submit" translatable="false">updateprofile_inputpin_submit</string>
+    <string name="updateprofileform_success" translatable="false">updateprofileform_success</string>
+    <string name="contactus_tapped" translatable="false">contactus_tapped</string>
+    <string name="contactus_viewed" translatable="false">contactus_viewed</string>
+    <string name="contactus_back_tapped" translatable="false">contactus_back_tapped</string>
+    <string name="contactus_email_tapped" translatable="false">contactus_email_tapped</string>
+    <string name="contactus_phone_tapped" translatable="false">contactus_phone_tapped</string>
+    <string name="help_tapped" translatable="false">help_tapped</string>
+    <string name="help_viewed" translatable="false">help_viewed</string>
+    <string name="help_back_tapped" translatable="false">help_back_tapped</string>
+    <string name="termsconditions_tapped" translatable="false">termsconditions_tapped</string>
+    <string name="logout_tapped" translatable="false">logout_tapped</string>
+    <string name="registration_success_tapped" translatable="false">registration_success_tapped</string>
+    <string name="forgotpin_info_incorrect" translatable="false">forgotpin_info_incorrect</string>
+    <string name="forgotpin_otp_blocked" translatable="false">forgotpin_otp_blocked</string>
+    <string name="registration_otp_blocked" translatable="false">registration_otp_blocked</string>
+
+    <string name="str_popup_showqr">QR code has expired.\nPlease generate new QR Code</string>
+    <string name="str_retry">Retry</string>
+    <string name="str_stronger_pin">Please choose a stronger PIN</string>
+    <string name="str_not_regis">Incorrect username or PIN.\nPlease try again</string>
+    <string name="str_toast_succes_kyc">Upgrade request has been successfully sent!</string>
+    <string name="str_save1">Save</string>
+    <string name="str_succes_update_profile">Profile update successful!</string>
+    <string name="str_changing_password">Change PIN successful!</string>
+    <string name="str_create_pin_awal">Create PIN successful!</string>
+    <string name="str_popup_confirm_payment">Purchase amount exceeds current balance</string>
+    <string name="str_paytips">Tips Amount</string>
+    <string name="txt_tips">Tips</string>
+    <string name="txt_title_konfirmasi">Confirmation</string>
+    <string name="txt_title_konfirmasi_dsc">You will pay IDR <b>%1$s</b> and tips IDR <b>%2$s</b></string>
+    <string name="txt_title_konfirmasi_cancel">Cancel</string>
+    <string name="txt_title_konfirmasi_ok">Ok</string>
+
+    <string name="str_path_provider" translatable="false">com.gpay.merchantapp.demo.fileprovider</string>
+
+    <string name="str_write_storage_access">You must need to give access of WRITE DEVICE STORAGE in order to download guide book</string>
+    <string name="str_downloaded_file">file have been downloaded at download folder</string>
+    <string name="str_downloaded_guide_book">Guide book file have been downloaded</string>
+    <string name="str_necessary_permission">Necessary Permissions required for this app</string>
+    <string name="str_enable_permission">Enable All permissions, Click On Permission</string>
+</resources>

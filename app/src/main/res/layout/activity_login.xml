@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:src="@drawable/logo_gpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.01"
+            android:text="@string/str_selamat_datang"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_big_c" />
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center">
+
+             <TextView
+                 android:id="@+id/versiapps"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:fontFamily="@font/sourcesanspro_regular"
+                 android:textColor="@color/grey_line"
+                 android:textSize="@dimen/txt_size_medium" />
+         </LinearLayout>-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="317dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="59dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/warm_grey_two"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/txt_username"
+                        android:inputType="text"
+                        android:textColor="@color/greyish_brown_two"
+                        android:textColorHint="@color/grey_hint"
+                        android:textSize="@dimen/txt_size_big_a" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_signin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/bg_grey_corners10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:padding="12dp"
+                        android:text="@string/str_continue_login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_big_a" />
+
+                    <Button
+                        android:id="@+id/btn_merchant_reg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/bg_blue2_corners10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:padding="12dp"
+                        android:text="@string/str_merchant_registration"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_big_a"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/action_to_contactUs"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="22dp"
+                        android:text="Didn't Have an Account?" />
+
+                    <TextView
+                        android:id="@+id/tv_Register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/action_to_contactUs"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:text="Register Now!"
+                        android:textColor="@color/bluemerchantapp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/action_to_contactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:letterSpacing="0.01"
+                        android:paddingLeft="20dp"
+                        android:text="@string/str_contact_us_lowercase"
+                        android:textColor="@color/bluemerchantapp"
+                        android:textSize="@dimen/txt_size_xmedium" />
+
+                    <TextView
+                        android:id="@+id/action_to_forgetpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:letterSpacing="0.01"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/str_forget_pin_lowercase"
+                        android:textColor="@color/bluemerchantapp"
+                        android:textSize="@dimen/txt_size_xmedium" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/versiapps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing="0.01"
+            android:text="1.0.7"
+            android:textColor="@color/greyish_brown"
+            android:textSize="@dimen/txt_size_xmedium" />
+
+    </LinearLayout>
+
+</LinearLayout>

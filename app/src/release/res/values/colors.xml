@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02aeff</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#5681AF</color>
+    <color name="blue">#02aeff</color>
+    <color name="bluemerchantapp">#00b0ff</color>
+    <color name="bluetranshistory">#8902aeff</color>
+    <color name="blueloginactive">#00b0ff</color>
+    <color name="blueOld">#4882b3</color>
+    <color name="blue2">#00b0f0</color>
+    <color name="blue4">#2ca7cb</color>
+    <color name="black">#dd000000</color>
+    <color name="blackGPay">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#BDBDBD</color>
+    <color name="grey2">#5A5656</color>
+    <color name="greyfont">#8b000000</color>
+    <color name="greygpay">#f6f6f6</color>
+    <color name="greyview">#f1f1f1</color>
+    <color name="grey_hint">#c8c8cc</color>
+    <color name="blue3">#1664a1</color>
+    <color name="greyish_brown">#4a4a4a</color>
+    <color name="greyish_brown_two">#454545</color>
+    <color name="greyPin">#808083</color>
+    <color name="red">#da3741</color>
+    <color name="orange">#ff7761</color>
+    <color name="warm_grey_two">#9e9e9e</color>
+    <color name="grey_line">#9b9b9b</color>
+    <color name="grey_new">#eaedf1</color>
+    <color name="photo_grey">#eeeeee</color>
+    <color name="white_eight">#f8f8f8</color>
+    <color name="grey_navigation">#e5e5e5</color>
+    <color name="brown_help">#424242</color>
+    <color name="brown_home">#717171</color>
+    <color name="green">#35ac19</color>
+    <color name="bg_white2">#f7fdfd</color>
+
+</resources>

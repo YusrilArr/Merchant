@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.gpay.merchantapp.full",
+  "variantName": "fullRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 18,
+      "versionName": "1.2.2",
+      "outputFile": "app-full-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

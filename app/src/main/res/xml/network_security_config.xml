@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">mblweb</domain>
+        <domain includeSubdomains="false">psmw.gpay.digital</domain>
+        <domain includeSubdomains="false">dev-c.gpay.digital</domain>
+        <domain includeSubdomains="true">gaja.id</domain>
+    </domain-config>
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
