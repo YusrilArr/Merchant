@@ -25,7 +25,7 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('C:/Intern/WORK/merchant/gaja-merchant-app/app/keystore')
+            storeFile file('C:/Users/GPAY-User/Documents/INTERN GPAY/Merchant/app/keystore')
             //storeFile file('D:\\GPAY\\Mobile_Apps\\AndroidProject\\app\\keystore')
             //storeFile file('/home/aulia/StudioProjects/GPayCard/app/keystore')
             storePassword 'merchantGPay'
@@ -34,7 +34,7 @@ android {
         }
 
         release {
-            storeFile file('C:/Intern/WORK/merchant/gaja-merchant-app/app/keystoreProd')
+            storeFile file('C:/Users/GPAY-User/Documents/INTERN GPAY/Merchant/app/keystoreProd')
             //storeFile file('D:\\GPAY\\Mobile_Apps\\AndroidProject\\app\\keystoreProd')
             //storeFile file('/home/aulia/StudioProjects/GPayCard/app/keystoreProd')
             storePassword 'merchantGPay'
