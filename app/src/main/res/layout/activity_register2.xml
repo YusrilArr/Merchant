@@ -142,7 +142,7 @@
                                     android:background="@drawable/edittext_outline"
                                     android:paddingStart="10dp"
                                     android:paddingTop="5dp"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="20dp"
                                     android:inputType="text"
                                     android:layout_marginLeft="25sp"
                                     android:layout_marginRight="25sp"
@@ -315,22 +315,22 @@
 
                                 <Button
                                     android:id="@+id/btn_addlogo"
-                                    android:layout_width="70sp"
+                                    android:layout_width="80sp"
                                     android:layout_height="50sp"
                                     android:layout_marginEnd="240dp"
                                     android:backgroundTint="#03A9F4"
-                                    android:text="Add+"
+                                    android:text="Upload"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
 
                                 <Button
                                     android:id="@+id/btn_addstore"
-                                    android:layout_width="70sp"
+                                    android:layout_width="80sp"
                                     android:layout_height="50sp"
                                     android:layout_marginStart="240dp"
                                     android:backgroundTint="#03A9F4"
-                                    android:text="Add+"
+                                    android:text="upload"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.498"
                                     app:layout_constraintStart_toStartOf="parent"
