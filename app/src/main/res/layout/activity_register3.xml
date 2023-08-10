@@ -116,24 +116,24 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <EditText
-                                    android:id="@+id/et_bankName"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="20dp"
-                                    android:layout_marginLeft="25sp"
-                                    android:layout_marginRight="25sp"
-                                    android:inputType="number"
-                                    android:paddingBottom="20sp"
-                                    android:background="@drawable/edittext_outline"
-                                    android:paddingStart="10dp"
-                                    android:paddingTop="5dp"
-                                    android:hint="Bank Name"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent">
+<!--                                <EditText-->
+<!--                                    android:id="@+id/et_bankName"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="20dp"-->
+<!--                                    android:layout_marginLeft="25sp"-->
+<!--                                    android:layout_marginRight="25sp"-->
+<!--                                    android:inputType="number"-->
+<!--                                    android:paddingBottom="20sp"-->
+<!--                                    android:background="@drawable/edittext_outline"-->
+<!--                                    android:paddingStart="10dp"-->
+<!--                                    android:paddingTop="5dp"-->
+<!--                                    android:hint="Bank Name"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent">-->
 
-                                </EditText>
+<!--                                </EditText>-->
 
                                 <EditText
                                     android:id="@+id/et_ownerbankname"
@@ -151,7 +151,7 @@
 
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/et_bankName"
+
                                     app:layout_goneMarginTop="20sp">
 
                                 </EditText>
@@ -161,12 +161,11 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="25sp"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="65dp"
                                     android:layout_marginRight="25sp"
                                     android:hint="Number"
                                     android:paddingStart="10dp"
                                     android:paddingTop="5dp"
-
                                     android:background="@drawable/edittext_outline"
                                     android:inputType="number"
                                     android:paddingBottom="20sp"
@@ -175,6 +174,22 @@
                                     app:layout_constraintTop_toBottomOf="@+id/et_ownerbankname">
 
                                 </EditText>
+
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spinnerBank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="25sp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="25sp"
+                                    android:background="@drawable/edittext_outline"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    tools:layout_editor_absoluteY="200dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/et_ownerbankname"/>
 
                                 <Button
                                     android:id="@+id/btn_submitregister"
