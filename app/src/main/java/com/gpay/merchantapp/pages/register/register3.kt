@@ -21,7 +21,7 @@ class register3 : AppCompatActivity() {
         val spinnerBank = binding.spinnerBank
 
         // Daftar pilihan bank
-        val bankOptions = arrayOf("BANK NAME", "BCA", "BRI", "BNI", "BSI")
+        val bankOptions = arrayOf("Select Bank", "BCA", "BRI", "BNI", "BSI", "Mandiri")
 
         // Buat adapter untuk spinner
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, bankOptions)
