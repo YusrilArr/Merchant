@@ -1761,4 +1761,5 @@ class Service(private val networkService: NetworkService) {
     fun convertStringtoRequestBody(data: String): RequestBody {
         return RequestBody.create(MediaType.parse("text/plain"), data)
     }
+
 }

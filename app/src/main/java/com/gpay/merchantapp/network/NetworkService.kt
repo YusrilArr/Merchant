@@ -363,4 +363,31 @@ interface NetworkService {
         @Field("signature") signature: String,
         @HeaderMap headers: Map<String, String>
     ): Observable<ResponseQRDownload>
+
+    @FormUrlEncoded
+    @POST("v1/m_app/insert")
+    fun postNewMerchant(
+        @Field("merchant_name") merchant_name: String,
+        @Field("marketing_name") marketing_name: String,
+        @Field("address") address: String,
+        @Field("city_name") city_name: String,
+        @Field("phone") phone: String,
+        @Field("email") email: String,
+        @Field("contact_person") contact_person: String,
+        @Field("zip_code") zip_code: String,
+        @Field("tax_no") tax_no: String,
+        @Field("dt_create") dt_create: String,
+        @Field("is_del") is_del: String,
+        @Field("merchant_category") merchant_category: String,
+        @Field("legal_entity_name") legal_entity_name: String,
+        @Field("bank_id") bank_name: String,
+        @Field("bank_account_name") bank_account_name: String,
+        @Field("bank_account_number") bank_account_number: String,
+        @Field("province_name") provice_name: String,
+        @Field("merchant_group_id") merchant_group_id: String,
+        @Field("filename_ktp") filename_ktp: String,
+        @Field("filename_selfie") filename_selfie: String,
+
+        @HeaderMap headers: Map<String, String>
+    ): Observable<ResponseNewMerchant>
 }
