@@ -235,7 +235,68 @@ class Service(private val networkService: NetworkService) {
                 }
             })
     }
+    
+//coba
+    fun postNewMerchant(
+        merchantData: Map<String, String>,
+        callback: CallbackNewMerchant
+    ): Subscription {
+        val header = HashMap<String, String>()
+        header["Device-Id"] = MainApp.instance.uniquePsuedoID
+        header["Login-Token"] =
+            MainApp.instance.sharedPreferences!!.getString(SharedPreferencesUtils._KEY_L_TOKEN, "").toString()
 
+        return networkService.postNewMerchant(
+            merchantData["merchant_name"] ?: "",
+            merchantData["marketing_name"] ?: "",
+            merchantData["address"] ?: "",
+            merchantData["city_name"] ?: "",
+            merchantData["phone"] ?: "",
+            merchantData["email"] ?: "",
+            merchantData["contact_person"] ?: "",
+            merchantData["zip_code"] ?: "",
+            merchantData["tax_no"] ?: "",
+            merchantData["dt_create"] ?: "",
+            merchantData["is_del"] ?: "",
+            merchantData["merchant_category"] ?: "",
+            merchantData["legal_entity_name"] ?: "",
+            merchantData["bank_id"] ?: "",
+            merchantData["bank_account_name"] ?: "",
+            merchantData["bank_account_number"] ?: "",
+            merchantData["province_name"] ?: "",
+            merchantData["merchant_group_id"] ?: "",
+            merchantData["filename_ktp"] ?: "",
+            merchantData["filename_selfie"] ?: "",
+            header
+        ).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .onErrorResumeNext { t: Throwable? -> Observable.error(t) }
+            .subscribe(object : Subscriber<ResponseNewMerchant>() {
+                override fun onCompleted() {
+                    //event completed request
+                }
+
+                override fun onError(e: Throwable?) {
+                    try {
+                        callback.onError(bahasa(NetworkError(e).appErrorMessage), "")
+                    } catch (ex: Exception) {
+                        ex.printStackTrace()
+                    }
+                }
+
+                override fun onNext(t: ResponseNewMerchant) {
+                    if (t.status.equals("0")) {
+                        callback.onSuccess(t)
+                    } else {
+                        if (t.status.equals("5")) {
+                            MainApp.instance!!.onSessionExpired()
+                        } else {
+                            callback.onError(bahasa(t.error!!), t.status!!)
+                        }
+                    }
+                }
+            })
+    }
     fun postRegister(
         mobile_phone_no: String,
         email: String,
@@ -1761,5 +1822,10 @@ class Service(private val networkService: NetworkService) {
     fun convertStringtoRequestBody(data: String): RequestBody {
         return RequestBody.create(MediaType.parse("text/plain"), data)
     }
+    interface CallbackNewMerchant {
+        fun onSuccess(response: ResponseNewMerchant)
+        fun onError(errorMessage: String, statusCode: String)
+    }
+
 
 }
