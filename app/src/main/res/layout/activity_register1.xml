@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/greygpay"
-    tools:context=".pages.register.register1"
+    tools:context=".pages.register.Register1Activity"
     >
 
     <FrameLayout
