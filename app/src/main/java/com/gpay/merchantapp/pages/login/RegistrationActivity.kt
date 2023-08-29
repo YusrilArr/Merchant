@@ -8,6 +8,7 @@ import com.gpay.merchantapp.utils.BaseActivity
 class RegistrationActivity : BaseActivity(), RegistrationView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         setContentView(R.layout.activity_merchant_registration)
         super.onCreate(savedInstanceState)
     }

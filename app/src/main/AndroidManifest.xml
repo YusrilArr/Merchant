@@ -27,13 +27,16 @@
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".pages.register.RegistMerchant"
+            android:exported="false" />
+        <activity
             android:name=".pages.register.register3"
             android:exported="false" />
         <activity
             android:name=".pages.register.register2"
             android:exported="false" />
         <activity
-            android:name=".pages.register.register1"
+            android:name=".pages.register.Register1Activity"
             android:exported="false" />
         <activity
             android:name=".pages.login.LoginActivity"

@@ -1,43 +1,3 @@
-//package com.gpay.merchantapp.pages.register
-//
-//import android.content.Intent
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import android.view.View
-//import android.widget.Button
-//import com.gpay.merchantapp.R
-//import com.gpay.merchantapp.databinding.ActivityRegister1Binding
-//import com.gpay.merchantapp.databinding.ActivityRegister2Binding
-//
-//class register1 : AppCompatActivity() {
-//
-////    private lateinit var btnnext: Button
-//
-//    private lateinit var binding : ActivityRegister1Binding
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityRegister1Binding.inflate(layoutInflater)
-//        val view = binding.root
-//        setContentView(view)
-//
-//        binding.backReg1.setOnClickListener {
-//            finish()
-//        }
-//
-//
-//        val btnnext1 = findViewById<Button>(R.id.btn_next1)
-//
-//        btnnext1.setOnClickListener {
-//            Intent(this, register2::class.java).also {
-//                startActivity(it)
-//            }
-//        }
-//    }
-//
-//
-//}
-
 package com.gpay.merchantapp.pages.register
 
 import android.content.Intent
@@ -47,13 +7,16 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
-import com.gpay.merchantapp.R
 import com.gpay.merchantapp.databinding.ActivityRegister1Binding
-import com.gpay.merchantapp.databinding.ActivityRegister2Binding
 
-class register1 : AppCompatActivity() {
+class Register1Activity : AppCompatActivity(), RegisterView {
+
+
 
     private lateinit var binding: ActivityRegister1Binding
+    private lateinit var presenter: RegisterPresenter
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,19 +24,30 @@ class register1 : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
+
+        presenter = RegisterPresenter(this)
+
+
+
         binding.backReg1.setOnClickListener {
             finish()
         }
 
+
+
         val btnNext1 = binding.btnNext1
 
-        // Add a TextWatcher to each EditText
+
+
         val editTextList = listOf(
             binding.etNameowner,
             binding.etPhoneowner,
             binding.editTextTextEmailAddress2,
             binding.etNpwp
         )
+
+
 
         editTextList.forEach { editText ->
             editText.addTextChangedListener(object : TextWatcher {
@@ -85,20 +59,44 @@ class register1 : AppCompatActivity() {
             })
         }
 
+
+
         btnNext1.setOnClickListener {
-            Intent(this@register1, register2::class.java).also {
-                startActivity(it)
-            }
+            val merchantData = mapOf(
+                "merchant_name" to binding.etNameowner.text.toString(),
+                "phone" to binding.etPhoneowner.text.toString(),
+                "email" to binding.editTextTextEmailAddress2.text.toString(),
+                "tax_no" to binding.etNpwp.text.toString()
+                // Add other merchant data fields here...
+            )
+            presenter.postNewMerchant(merchantData)
         }
 
-        // Initialize button status
+
+
         updateButtonStatus(btnNext1, editTextList)
     }
+
+
+
+    override fun showSuccessMessage(message: String) {
+        // Display success message to the user
+    }
+
+
+
+    override fun showErrorMessage(message: String) {
+        // Display error message to the user
+    }
+
+
 
     private fun updateButtonStatus(button: Button, editTextList: List<EditText>) {
         val isAllFieldsFilled = editTextList.all { editText ->
             editText.text.toString().trim().isNotEmpty()
         }
+
+
 
         button.isEnabled = isAllFieldsFilled
         button.alpha = if (isAllFieldsFilled) 1f else 0.5f
