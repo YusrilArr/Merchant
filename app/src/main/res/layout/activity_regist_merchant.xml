@@ -578,24 +578,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
             <EditText
-                android:id="@+id/spinnerBank"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="20sp"
-                android:background="@drawable/edittext_outline"
-                android:hint="Owner Name"
-                android:inputType="text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spn_bank" />
-
-            <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/numberBank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -609,7 +592,24 @@
                 android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerBank" />
+                app:layout_constraintTop_toBottomOf="@+id/spn_bank" />
+
+            <EditText
+                android:id="@+id/ownerbank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="20sp"
+                android:background="@drawable/edittext_outline"
+                android:hint="Owner Name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberBank" />
 
             <Button
                 android:id="@+id/btnSubmit"
@@ -623,7 +623,7 @@
                 android:layout_marginBottom="100dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/ownerbank" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
