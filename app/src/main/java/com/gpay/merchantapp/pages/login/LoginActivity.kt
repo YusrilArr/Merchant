@@ -26,8 +26,7 @@ import com.gpay.merchantapp.pages.changepin.CreatePinActivity
 import com.gpay.merchantapp.pages.contactus.ContactusActivity
 import com.gpay.merchantapp.pages.contactus.ForgetPinActivity
 import com.gpay.merchantapp.pages.loginpin.LoginPinActivity
-import com.gpay.merchantapp.pages.register.RegistMerchant
-import com.gpay.merchantapp.pages.register.Register1Activity
+import com.gpay.merchantapp.pages.register.RegistMerchantActivity
 import com.gpay.merchantapp.utils.BaseActivity
 import com.gpay.merchantapp.utils.SharedPreferencesUtils
 import java.util.*
@@ -131,7 +130,7 @@ class LoginActivity : BaseActivity(), LoginView {
         }
 
         binding.tvRegister.setOnClickListener {
-            val intent = Intent(this, RegistMerchant::class.java)
+            val intent = Intent(this, RegistMerchantActivity::class.java)
             startActivity(intent)
         }
 

@@ -27,7 +27,7 @@
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".pages.register.RegistMerchant"
+            android:name=".pages.register.RegistMerchantActivity"
             android:exported="false" />
         <activity
             android:name=".pages.register.register3"
