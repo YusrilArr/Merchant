@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".pages.register.RegistMerchant">
+        tools:context=".pages.register.RegistMerchantActivity">
 
 
         <LinearLayout
@@ -111,7 +111,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="410dp"
-            android:layout_height="480dp"
+            android:layout_height="590dp"
             android:foregroundGravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -165,7 +165,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Name"
+                android:hint="Name Owner Merchant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -186,7 +186,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Phone"
+                android:hint="Owner Phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_merchantowner" />
@@ -205,7 +205,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Email"
+                android:hint="Email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_ownerphone" />
@@ -223,7 +223,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="NPWP"
+                android:hint="NPWP"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_emailowner" />
@@ -351,7 +351,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Brand Name"
+                android:hint="Brand Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
@@ -366,6 +366,7 @@
                 android:background="@drawable/edittext_outline"
                 android:ems="10"
                 android:inputType="textEmailAddress"
+                android:hint="Email Merchant"
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
@@ -386,7 +387,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Address"
+                android:hint="Address"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_merchantemail" />
@@ -403,7 +404,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="City"
+                android:hint="City"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_merchantaddress" />
@@ -420,7 +421,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Postal Code"
+                android:hint="Postal Code"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_merchantaddress" />
@@ -527,8 +528,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            android:layout_height="590dp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            tools:layout_editor_absoluteX="0dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
@@ -556,11 +558,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                    </TextView>
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </LinearLayout>
 
             <Spinner
@@ -568,31 +567,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
-                android:background="@drawable/edittext_outline"
-                android:ems="10"
                 android:paddingStart="10dp"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="20sp"
+                android:background="@drawable/edittext_outline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
             <EditText
-                android:id="@+id/et_bankname"
+                android:id="@+id/spinnerBank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
-                android:background="@drawable/edittext_outline"
-                android:ems="10"
                 android:paddingStart="10dp"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="20sp"
+                android:background="@drawable/edittext_outline"
+                android:hint="Owner Name"
                 android:inputType="text"
-                android:text="Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spn_bank" />
@@ -604,32 +601,31 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
-                android:background="@drawable/edittext_outline"
-                android:ems="10"
                 android:paddingStart="10dp"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="20sp"
-                android:text="Number"
+                android:background="@drawable/edittext_outline"
+                android:hint="Number"
                 android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_bankname" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerBank" />
 
             <Button
-                android:layout_width="match_parent"
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+
+                android:text="Submit"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="40dp"
-                android:backgroundTint="#03A9F4"
                 android:layout_marginEnd="25dp"
-                android:text="Submit"
+                android:layout_marginBottom="100dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
