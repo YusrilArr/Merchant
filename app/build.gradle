@@ -61,7 +61,7 @@ android {
             //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/dev_ewallet_api/\"" //Merchant App Server
             //buildConfigField "String", "BASEURL", "\"https://dev-c.gpay.digital/api/public/\"" //Production Indocloud
             //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/project_c_api/api/public/\"" //Production Colo
-            buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/dev_c_api/api/public/\"" // Development
+            buildConfigField "String", "BASEURL", "\"http://10.77.21.53:8080/\"" // Development
             //buildConfigField "String", "BASEURL", "\"https://psmw.gpay.digital/c_api/api/public/\"" //Production
             //buildConfigField "String", "BASEURL", "\"https://api-test.gpay.digital/dev_c_api/api/public/\"" // Testing Renewal SSL
             buildConfigField "String", "BASEURL_BACKUP", "\"https://psmw2.gpay.digital/api/public/\""

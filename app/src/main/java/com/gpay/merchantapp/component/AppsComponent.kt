@@ -13,6 +13,7 @@ import com.gpay.merchantapp.pages.home.settlementhistory.SettlementHistoryActivi
 import com.gpay.merchantapp.pages.home.transhistory.TransHistoryActivity
 import com.gpay.merchantapp.pages.login.LoginActivity
 import com.gpay.merchantapp.pages.loginpin.LoginPinActivity
+import com.gpay.merchantapp.pages.register.RegistMerchantActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -32,4 +33,5 @@ interface AppsComponent {
     fun inject(transHistoryActivity: TransHistoryActivity)
     fun inject(settlementHistoryActivity: SettlementHistoryActivity)
     fun inject(myFirebaseInstanceIDService: MyFirebaseInstanceIDService)
+    fun inject(registMerchantActivity: RegistMerchantActivity)
 }
