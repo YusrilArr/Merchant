@@ -241,10 +241,13 @@ class Service(private val networkService: NetworkService) {
         merchantData: Map<String, String>,
         callback: CallbackNewMerchant
     ): Subscription {
+        print("=======")
+        println(merchantData)
         val header = HashMap<String, String>()
         header["Device-Id"] = MainApp.instance.uniquePsuedoID
         header["Login-Token"] =
             MainApp.instance.sharedPreferences!!.getString(SharedPreferencesUtils._KEY_L_TOKEN, "").toString()
+        println("Test4")
 
         return networkService.postNewMerchant(
             merchantData["merchant_name"] ?: "",
@@ -254,12 +257,12 @@ class Service(private val networkService: NetworkService) {
             merchantData["phone"] ?: "",
             merchantData["email"] ?: "",
             merchantData["contact_person"] ?: "",
-            merchantData["zip_code"] ?: "",
+            merchantData["zipcode"] ?: "",
             merchantData["tax_no"] ?: "",
-            merchantData["dt_create"] ?: "",
-            merchantData["is_del"] ?: "",
+//            merchantData["dt_create"] ?: "",
+//            merchantData["is_del"] ?: "",
             merchantData["merchant_category"] ?: "",
-            merchantData["legal_entity_name"] ?: "",
+//            merchantData["legal_entity_name"] ?: "",
             merchantData["bank_id"] ?: "",
             merchantData["bank_account_name"] ?: "",
             merchantData["bank_account_number"] ?: "",
@@ -1726,7 +1729,9 @@ class Service(private val networkService: NetworkService) {
     interface CallbackGetToken : BaseCallback {
         fun onSuccess(response: ResponseGetToken)
     }
-
+    interface CallbackPostRegist : BaseCallback {
+        fun onSuccess(response: ResponseRegister)
+    }
     interface CallbackPostLogin : BaseCallback {
         fun onSuccess(response: ResponseLogin)
     }

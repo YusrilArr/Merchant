@@ -18,11 +18,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.gpay.merchantapp.R
 import com.gpay.merchantapp.databinding.ActivityRegistMerchantBinding
+import com.gpay.merchantapp.network.Service
+import com.gpay.merchantapp.pages.loginpin.LoginPinPresenter
 import java.io.IOException
+import javax.inject.Inject
+import com.gpay.merchantapp.MainApp
 
 class RegistMerchantActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistMerchantBinding
+    @Inject
+    lateinit var service: Service
+    lateinit var presenter: RegistMerchantPresenter
 
     private val pickImage = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
@@ -46,10 +53,9 @@ class RegistMerchantActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistMerchantBinding.inflate(layoutInflater)
+        init()
         val view = binding.root
         setContentView(view)
-
-
         binding.btnKtp.setOnClickListener {
             pickImage.launch(Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI))
         }
@@ -87,10 +93,62 @@ class RegistMerchantActivity : AppCompatActivity() {
         // Attach text change listeners to input fields
         binding.etMerchantname.addTextChangedListener(textWatcher)
         binding.etMerchantemail.addTextChangedListener(textWatcher)
+        binding.etMerchantaddress.addTextChangedListener(textWatcher)
+        binding.etMerchantcity.addTextChangedListener(textWatcher)
+        binding.etKodepos.addTextChangedListener(textWatcher)
+
+        binding.etMerchantowner.addTextChangedListener(textWatcher)
+        binding.etOwnerphone.addTextChangedListener(textWatcher)
+        binding.etEmailowner.addTextChangedListener(textWatcher)
+        binding.etNpwpowner.addTextChangedListener(textWatcher)
+
+        binding.numberBank.addTextChangedListener(textWatcher)
+        binding.ownerbank.addTextChangedListener(textWatcher)
+
         // Add other input fields...
 
+//        binding.btnSubmit.setOnClickListener {
+//            // Handle submit button click
+//        }
+
         binding.btnSubmit.setOnClickListener {
-            // Handle submit button click
+//            val enteredText = binding.etEmailowner.text.toString()
+            val add = mapOf<String,String>(
+                "email" to binding.etEmailowner.text.toString(),
+                "marketing_name" to binding.etMerchantowner.text.toString(),
+                "phone" to binding.etOwnerphone.text.toString(),
+                "tax_no" to binding.etNpwpowner.text.toString(),
+
+                "merchant_name" to  binding.etMerchantname.text.toString(),
+                "contact_person" to  binding.etMerchantemail.text.toString(),
+                "address" to  binding.etMerchantaddress.text.toString(),
+                "city_name" to  binding.etMerchantcity.text.toString(),
+                "zipcode" to  binding.etKodepos.text.toString(),
+
+                "bank_account_number" to  binding.numberBank.text.toString(),
+                "bank_account_name" to  binding.ownerbank.text.toString()
+
+            )
+//            val AddMerchant = object {
+//                val emailOwner = binding.etEmailowner.text.toString()
+//                val ownerName = binding.etMerchantowner.text.toString()
+//                val phoneNumber = binding.etOwnerphone.text.toString()
+//                val npwpOwner = binding.etNpwpowner.text.toString()
+//
+//                val merchantName = binding.etMerchantname.text.toString()
+//                val merchantEmail = binding.etMerchantemail.text.toString()
+//                val merchantAddress = binding.etMerchantaddress.text.toString()
+//                val merchantCity = binding.etMerchantcity.text.toString()
+//                val merchantPostal = binding.etKodepos.text.toString()
+//
+//                val numberBank = binding.numberBank.text.toString()
+//                val ownerBank = binding.ownerbank.text.toString()
+//            }
+            //loginScreenTracking(edt_mobile.text.toString())
+            if (true) {
+                presenter.addMerchant(add)
+                println("Test 1")
+            }
         }
     }
 
@@ -128,15 +186,48 @@ class RegistMerchantActivity : AppCompatActivity() {
     }
 
     private fun updateSubmitButtonState() {
+
+        //1
+        val ownerName = binding.etMerchantowner.text.toString().trim()
+        val phoneNumber = binding.etOwnerphone.text.toString().trim()
+        val emailOwner = binding.etEmailowner.text.toString().trim()
+        val npwpOwner = binding.etNpwpowner.text.toString().trim()
+
+        //2
         val merchantName = binding.etMerchantname.text.toString().trim()
         val merchantEmail = binding.etMerchantemail.text.toString().trim()
+        val merchantAddress = binding.etMerchantaddress.text.toString().trim()
+        val merchantCity = binding.etMerchantcity.text.toString().trim()
+        val merchantPostal = binding.etKodepos.text.toString().trim()
+
+//        //3
+        val numberBank = binding.numberBank.text.toString().trim()
+        val ownerBank = binding.ownerbank.text.toString().trim()
+
         // Get values from other input fields...
 
-        val isNotEmpty = merchantName.isNotEmpty() && merchantEmail.isNotEmpty()
+        val isNotEmpty = merchantName.isNotEmpty() &&
+                merchantEmail.isNotEmpty() &&
+                merchantAddress.isNotEmpty() &&
+                merchantCity.isNotEmpty() &&
+                merchantPostal.isNotEmpty() &&
+
+                ownerName.isNotEmpty() &&
+                phoneNumber.isNotEmpty() &&
+                emailOwner.isNotEmpty() &&
+                npwpOwner.isNotEmpty() &&
+
+                numberBank.isNotEmpty() &&
+                ownerBank.isNotEmpty()
+
         binding.btnSubmit.isEnabled = isNotEmpty
 
         // Set button background based on enable state
         val backgroundResource = if (isNotEmpty) R.drawable.bg_blue_corners10 else R.drawable.bg_grey_corners10
         binding.btnSubmit.setBackgroundResource(backgroundResource)
+    }
+    fun init() {
+        MainApp.instance?.appComponent?.inject(this)
+        presenter = RegistMerchantPresenter(service)
     }
 }
