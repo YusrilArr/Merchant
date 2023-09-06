@@ -1,6 +1,7 @@
 package com.gpay.merchantapp.pages.register
 
 import android.content.Intent
+import android.widget.Toast
 import com.gpay.merchantapp.MainApp
 import com.gpay.merchantapp.network.Service
 import com.gpay.merchantapp.network.response.ResponseNewMerchant
@@ -15,6 +16,7 @@ class RegistMerchantPresenter(val service: Service,) {
         service.postNewMerchant(AddMerchant, object : Service.CallbackNewMerchant {
             override fun onError(networkError: String, status: String) {
                 println("Pendaftaran Gagal")
+
 //                view.hideLoading()
 //                if (status != null) {
 //                    if (status.equals("2")) {
@@ -26,6 +28,8 @@ class RegistMerchantPresenter(val service: Service,) {
 //                        view.onErrorMessage(networkError)
 //                    }
 //                }
+                val context = MainApp.instance.applicationContext
+                Toast.makeText(context, "Pendaftaran Gagal, silakan coba lagi", Toast.LENGTH_SHORT).show()
             }
 
             override fun onSuccess(response: ResponseNewMerchant) {
@@ -47,6 +51,7 @@ class RegistMerchantPresenter(val service: Service,) {
                 val intent = Intent(context, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 context.startActivity(intent)
+                Toast.makeText(context, "Pendaftaran Berhasil", Toast.LENGTH_SHORT).show()
             }
         })
 

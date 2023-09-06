@@ -4,6 +4,7 @@ package com.gpay.merchantapp.pages.register
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -13,6 +14,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -80,11 +82,40 @@ class RegistMerchantActivity : AppCompatActivity() {
         val qtyOptions = arrayOf("Qty", "1", "2 - 5", "6 - 10", "> 10")
         setupSpinner(binding.spnQty, qtyOptions.toList(), "Qty")
 
-        val categoryOptions = listOf("Select Category", "Shopping", "Groceries", "Donate")
+        val categoryOptions = listOf("Select Category", "Shopping", "Groceries", "Donate", "Food & Baverage", "Fashion & Acc", "Automotive", "Personal Service")
         setupSpinner(binding.spnCategory, categoryOptions, "Select Category")
 
         val bankOptions = listOf("Select Bank", "BCA", "BRI", "BNI", "BSI", "Mandiri")
         setupSpinner(binding.spnBank, bankOptions, "Select Bank")
+
+        binding.spnQty.setSelection(0, false)
+        binding.spnQty.getChildAt(0).isEnabled = false
+
+        binding.spnCategory.setSelection(0, false)
+        binding.spnCategory.getChildAt(0).isEnabled = false
+
+        binding.spnBank.setSelection(0, false)
+        binding.spnBank.getChildAt(0).isEnabled = false
+
+        fun setOptionTextColor(spinner: Spinner, optionText: String, color: Int) {
+            val adapter = spinner.adapter
+            if (adapter != null) {
+                for (i in 0 until adapter.count) {
+                    if (adapter.getItem(i).toString() == optionText) {
+                        val view = spinner.getChildAt(i)
+                        if (view is TextView) {
+                            view.setTextColor(color)
+                        }
+                        break
+                    }
+                }
+            }
+        }
+
+// Mengatur warna teks opsi "Select Category", "Qty", dan "Select Bank" menjadi abu-abu
+        setOptionTextColor(binding.spnQty, "Qty", Color.GRAY)
+        setOptionTextColor(binding.spnCategory, "Select Category", Color.GRAY)
+        setOptionTextColor(binding.spnBank, "Select Bank", Color.GRAY)
 
         // Disable submit button by default and set its style
         binding.btnSubmit.isEnabled = false
