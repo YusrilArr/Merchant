@@ -157,7 +157,11 @@ class RegistMerchantActivity : AppCompatActivity() {
                 "zipcode" to  binding.etKodepos.text.toString(),
 
                 "bank_account_number" to  binding.numberBank.text.toString(),
-                "bank_account_name" to  binding.ownerbank.text.toString()
+                "bank_account_name" to  binding.ownerbank.text.toString(),
+
+                "bank_id" to binding.spnBank.selectedItem.toString(),
+                "merchant_category" to binding.spnCategory.selectedItem.toString(),
+                "merchant_group_id" to binding.spnQty.selectedItem.toString()
 
             )
 //            val AddMerchant = object {
